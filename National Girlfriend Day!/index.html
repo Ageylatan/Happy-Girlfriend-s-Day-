@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy National Girlfriend Day! ❤️</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter and Dancing Script for romantic font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Moving gradient pink background */
+            background: linear-gradient(270deg, #ffdde1, #ffafbd, #ffc3a0, #ffafbd, #ffdde1);
+            background-size: 400% 400%; /* Make background larger than viewport */
+            animation: gradientAnimation 15s ease infinite; /* Apply animation */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .container {
+            background-color: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 900px;
+            width: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column; /* Always column for stacking elements */
+            gap: 20px;
+        }
+        .slideshow-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+        .mySlides {
+            display: none;
+            width: 100%;
+            height: 350px; /* Fixed height for consistency */
+            object-fit: cover; /* Cover the area, crop if necessary */
+            border-radius: 15px;
+            transition: opacity 1.5s ease-in-out; /* Smooth fade transition */
+        }
+        .mySlides.active {
+            display: block;
+            opacity: 1;
+        }
+        .mySlides.fade {
+            opacity: 0;
+        }
+        .message-box {
+            background-color: #ffebee; /* Lighter pink for message box */
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            color: #880e4f; /* Darker pink text */
+            font-size: 1.1rem;
+            line-height: 1.6;
+            text-align: left;
+            display: none; /* Initially hidden */
+        }
+        .message-box h2 {
+            font-size: 1.8rem;
+            color: #c2185b; /* Medium pink heading */
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .message-box p {
+            margin-bottom: 10px;
+        }
+        /* Responsive adjustments */
+        @media (min-width: 768px) {
+            .mySlides {
+                height: 400px; /* Taller on larger screens */
+            }
+        }
+        .main-greeting {
+            font-family: 'Dancing Script', cursive; /* Romantic font for greeting */
+            font-size: 3.5rem; /* Larger font for greeting */
+            color: #d81b60; /* Deep pink color */
+            margin-bottom: 30px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        .love-letter-button {
+            background-color: #e91e63; /* Pink button */
+            color: white;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 5px 15px rgba(233, 30, 99, 0.3);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .love-letter-button:hover {
+            background-color: #c2185b; /* Darker pink on hover */
+            transform: translateY(-2px);
+        }
+        .slideshow-dots-container {
+            text-align: center;
+            margin-top: 15px;
+        }
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+            cursor: pointer;
+        }
+        .dot.active-dot {
+            background-color: #e91e63;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Greeting -->
+        <h1 class="main-greeting">Happy National Girlfriend Day my Lady!</h1>
+
+        <!-- Slideshow Section -->
+        <div class="slideshow-container">
+            <!-- INSTRUCTIONS: To add your photos, replace the `src` attribute value below with the direct URLs of your images.
+                 Make sure you have 10 images to match the slideshow functionality. -->
+            <img class="mySlides active" src="9.jpg" alt="Romantic Photo 1">
+            <img class="mySlides" src="1.jpg" alt="Romantic Photo 2">
+            <img class="mySlides" src="3.jpg" alt="Romantic Photo 3">
+            <img class="mySlides" src="5.jpg" alt="Romantic Photo 4">
+            <img class="mySlides" src="7.jpg" alt="Romantic Photo 5">
+            <img class="mySlides" src="10.jpg" alt="Romantic Photo 6">
+            <img class="mySlides" src="2.jpg" alt="Romantic Photo 7">
+            <img class="mySlides" src="4.jpg" alt="Romantic Photo 8">
+            <img class="mySlides" src="6.jpg" alt="Romantic Photo 9">
+            <img class="mySlides" src="8.jpg" alt="Romantic Photo 10">
+        </div>
+
+        <!-- Dots for slideshow navigation -->
+        <div class="slideshow-dots-container">
+            <span class="dot active-dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+            <span class="dot" onclick="currentSlide(8)"></span>
+            <span class="dot" onclick="currentSlide(9)"></span>
+            <span class="dot" onclick="currentSlide(10)"></span>
+        </div>
+
+        <!-- Button to show message and play music -->
+        <button id="showLetterButton" class="love-letter-button">Click here to read my love letter for you... aguyyy smile ka muna hihihi</button>
+
+        <!-- Message Box Section -->
+        <div id="messageBox" class="message-box">
+            <h2>My Dearest Lady,</h2>
+            <p>Happy National Girlfriend Day! Gusto ko lang malaman mo na mahal na mahal kita baby ko sa lahat ng oras, panahon at taon pa natin pag sasamahan. Nawa, sa araw na to kahit sa simpleng paraan kong ito napasaya man lang kita pati sa pagbati ko kaninang umaga with looooooooooooooooooooooooong sweet message na inalmusal mo hehe. </p>
+            <p>Gusto ko lang malaman mo na blessed na blessed talaga ako na pumasok ka sa buhay ko lalo na ikaw ang first mover hehehe i love you! Alam kong medyo busy ka kakareview para sa exam mo pero one thing is for sure... PASADO yan syempre in Jesus' Name! Saka galingan mo lang baby ko kasi after graduation mo mag lalakad tayo ng mga scholarship hihi aguyyy laba-labay to met ta manakar kami hahaha!</p>
+            <p>Lagi mo lang tandaan na sisikapin kong maging the best na partner para sayo. Hindi ko man maipapangako na hindi ka luluha, pero sisikapin kong ang luha na tutulo sa luha mo ay dahil sa saya at pagmamahal na hindi lang galing sakin kundi pati kay Lord din. Madami pa tayong pag dadaanan, hindi man magiging madali pero hindi tayo susuko, lalo na ang foundation natin ay si Lord ay love na galing kay Lord.</p>
+            <p>Lagi natin ilagay si Lord sa center ng relasyon na to, unahin natin si Lord and everything else will fall into place. Pag pray pa natin ang relasyon na to baby, may progress na ay meron pang progress na mangyayari. I will always love you baby, at lagi din kitang pipiliin lalo sa panahon magulo na ang sitwasyon. Lagi natin aalalahanin kung paano tayo nagsimula at nilaban at pinagpray ang lahat.</p>
+            <p>Muli, happy girlfriend's day sayo baby girl ko! I love you so much! God bless us more, at mag grow pa tayo spiritually, mentally, and emotionally. Mahal na mahal kita aking Lady! mwaaa! </p>
+            <p>With all my love,</p>
+            <p>Karo</p>
+        </div>
+
+        <!-- Background Music -->
+        <audio id="background-music" loop>
+            <!-- INSTRUCTIONS: To add your own music, replace the `src` attribute value below with a direct URL to your MP3 file. -->
+            <source src="palagi.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+        let slideshowTimeout;
+        const slides = document.querySelectorAll('.mySlides');
+        const dots = document.querySelectorAll('.dot');
+        const audio = document.getElementById('background-music');
+        const showLetterButton = document.getElementById('showLetterButton');
+        const messageBox = document.getElementById('messageBox');
+
+        // Function to show slides and update dots
+        function showSlides() {
+            // Clear any existing slideshow timer
+            clearTimeout(slideshowTimeout);
+
+            // Hide all slides and remove active dot class
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove('active');
+                slides[i].classList.add('fade');
+                dots[i].classList.remove('active-dot');
+            }
+
+            // Increment slide index
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+
+            // Show the current slide and add active dot class
+            slides[slideIndex - 1].classList.remove('fade');
+            slides[slideIndex - 1].classList.add('active');
+            dots[slideIndex - 1].classList.add('active-dot');
+
+            // Set a new slideshow timer for the next slide
+            slideshowTimeout = setTimeout(showSlides, 5000); // Change image every 5 seconds
+        }
+
+        // Function to go to a specific slide when a dot is clicked
+        function currentSlide(n) {
+            slideIndex = n - 1; // Adjust for 0-based array index
+            showSlides();
+        }
+
+        // Event listener for the button
+        showLetterButton.addEventListener('click', () => {
+            messageBox.style.display = 'block'; // Show the message box
+            showLetterButton.style.display = 'none'; // Hide the button
+            audio.play().catch(e => console.log("Autoplay blocked:", e)); // Play audio
+        });
+
+        // Start the slideshow when the window loads
+        window.onload = function() {
+            showSlides();
+        };
+    </script>
+</body>
+</html>
